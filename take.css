@@ -1,0 +1,92 @@
+.truck {
+    position: absolute;
+    top: 20vh;
+    max-width: 100%;
+    width: 20vh;
+    object-fit: contain;
+    object-position: center;
+    animation: truck 1s ease-in forwards;
+}
+
+@keyframes truck {
+    0% {}
+
+    50% {
+        transform: translateX(50vh);
+    }
+
+    99% {
+        transform: translateX(100vh) scale(0.5);
+    }
+
+    100% {
+        transform: translateX(100vh) scale(0);
+    }
+
+}
+
+.taking {
+    perspective-origin: right;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: box 2s ease 1s 1 forwards;
+}
+
+@keyframes box {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform-origin: right;
+        transform: translate(0vh, 200vh) rotate(180deg);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.take {
+    border-radius: 0.5em;
+    background-color: var(--bg);
+    box-shadow: inset -5px -5px 15px 10px #fa1f6f;
+    width: 20vh;
+    height: 20vh;
+    margin: auto;
+    position: absolute;
+    top: 30vh;
+    left: calc(50% - 10vh);
+}
+
+.take.floor {
+    height: 10vh;
+    transform: rotateX(-90deg) translateZ(15vh);
+}
+
+.take.top {
+    transform: rotateY(0deg) translateZ(5vh);
+}
+
+.take.right {
+    width: 10vh;
+    transform: rotateY(-90deg) translateZ(5vh);
+}
+
+.take.bottom {
+
+    transform: rotateY(180deg) translateZ(5vh);
+}
+
+.take.left {
+    width: 10vh;
+    transform: rotateY(90deg) translateZ(15vh);
+}
+
+.take.lid {
+    height: 10vh;
+    transform-origin: right;
+    transform: rotateX(90deg) translateZ(5vh);
+}

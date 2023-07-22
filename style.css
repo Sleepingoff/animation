@@ -1,0 +1,114 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #ff5694;
+}
+
+section {
+    height: 100vh;
+}
+
+/* style */
+h1 {
+    text-align: center;
+    line-height: 2em;
+    color: var(--bg);
+}
+
+.wrap {
+    perspective-origin: right;
+    perspective: 700px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: down 1s ease 5s 1 forwards;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50vh) scale(0.5);
+    }
+}
+
+.box {
+    border-radius: 0.5em;
+    background-color: var(--bg);
+    box-shadow: inset -5px -5px 15px 10px #fa1f6f;
+    width: 20vh;
+    height: 20vh;
+    margin: auto;
+    position: absolute;
+    top: 50vh;
+    left: calc(50% - 10vh);
+}
+
+.box.floor {
+    transform: rotateX(-90deg) translateZ(10vh);
+}
+
+.box.top {
+
+    transform: rotateY(0deg) translateZ(10vh);
+}
+
+.box.right {
+    transform: rotateY(-90deg) translateZ(10vh);
+}
+
+.box.bottom {
+
+    transform: rotateY(180deg) translateZ(10vh);
+}
+
+.box.left {
+
+    transform: rotateY(90deg) translateZ(10vh);
+}
+
+.box.lid-left {
+    width: 10vh;
+    margin: 0;
+    transform-origin: right;
+    transform: translateX(10vh) rotateX(90deg) translateZ(10vh);
+    animation: open-lid-left 0.2s ease-in-out 5s 1 forwards;
+}
+
+.box.lid-right {
+    width: 10vh;
+    margin: 0;
+    transform-origin: left;
+    transform: rotateX(90deg) translateZ(10vh);
+    animation: open-lid-right 0.2s ease-in-out 5s 1 forwards;
+}
+
+@keyframes open-lid-right {
+    0% {
+        transform-origin: left;
+        transform: rotateX(90deg) translateZ(10vh);
+    }
+
+    100% {
+        transform-origin: left;
+        transform: rotateX(90deg) rotateY(-120deg) translate(8vh, 0) translateZ(-5vh);
+    }
+}
+
+@keyframes open-lid-left {
+    0% {
+        transform-origin: right;
+        transform: translateX(10vh) rotateX(90deg) translateZ(10vh);
+    }
+
+    100% {
+        transform-origin: right;
+        transform: rotateX(90deg) rotateY(100deg) translate(-10vh, 0) translateZ(8vh);
+    }
+}
