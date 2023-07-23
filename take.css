@@ -9,18 +9,22 @@
 }
 
 @keyframes truck {
-    0% {}
+    0% {
+        left: 0;
+    }
 
     50% {
-        transform: translateX(50vh);
+        left: 50%;
     }
 
     99% {
-        transform: translateX(100vh) scale(0.5);
+        left: 100%;
+        transform: scale(0.5);
     }
 
     100% {
-        transform: translateX(100vh) scale(0);
+        left: 100%;
+        transform: scale(0);
     }
 
 }
