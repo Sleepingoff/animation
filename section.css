@@ -28,32 +28,32 @@ section.take2 img {
 
 .icon:nth-child(2) {
     width: 15vh;
-    top: 20vh;
+    top: 25vh;
     left: 30%;
 }
 
 .icon:nth-child(3) {
     width: 12vh;
-    top: 30vh;
-    left: 60%;
+    top: 40vh;
+    left: 45%;
 }
 
 .icon:nth-child(4) {
     width: 15vh;
     top: 20vh;
-    left: 70%;
+    left: 60%;
 }
 
 .icon:nth-child(5) {
     width: 12vh;
     top: 20vh;
-    left: 10%;
+    left: 20%;
 }
 
 .icon:nth-child(6) {
     width: 12vh;
     top: 30vh;
-    left: 80%;
+    left: 70%;
 }
 
 .icon:nth-child(7) {
@@ -87,6 +87,10 @@ section.take2 img {
     }
 
     90% {
-        transform: scale(1.8);
+        transform: scale(2.5);
+    }
+
+    100% {
+        transform: scale(2.3);
     }
 }
