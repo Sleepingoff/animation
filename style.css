@@ -7,10 +7,11 @@
 
 :root {
     --bg: #ff5694;
+    --bd: #a4e49e;
 }
 
 body {
-    background-color: #f0ffce;
+    background-color: var(--bd);
 }
 
 section {
