@@ -91,6 +91,6 @@ section.take2 img {
     }
 
     100% {
-        transform: scale(2.3);
+        transform: scale(2);
     }
 }
