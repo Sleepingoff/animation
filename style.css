@@ -9,6 +9,10 @@
     --bg: #ff5694;
 }
 
+body {
+    background-color: #f0ffce;
+}
+
 section {
     height: 100vh;
 }

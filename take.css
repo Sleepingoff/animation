@@ -80,7 +80,6 @@
 }
 
 .take.bottom {
-
     transform: rotateY(180deg) translateZ(5vh);
 }
 
@@ -91,6 +90,5 @@
 
 .take.lid {
     height: 10vh;
-    transform-origin: right;
     transform: rotateX(90deg) translateZ(5vh);
 }
